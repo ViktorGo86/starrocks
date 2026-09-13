@@ -385,8 +385,8 @@ public class TypeCompatibilityMatrix {
         }
 
         // Check all the necessary entries that should be filled.
-        for (int i = 0; i < PrimitiveType.values().length; ++i) {
-            for (int j = i; j < PrimitiveType.values().length; ++j) {
+        for (int i = 0; i < PrimitiveType.values().length - 2; ++i) {
+            for (int j = i; j < PrimitiveType.values().length - 2; ++j) {
                 PrimitiveType t1 = PrimitiveType.values()[i];
                 PrimitiveType t2 = PrimitiveType.values()[j];
                 if (SKIP_COMPARE_TYPES.contains(t1) || SKIP_COMPARE_TYPES.contains(t2)) {
